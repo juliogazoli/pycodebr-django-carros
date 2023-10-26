@@ -8,3 +8,6 @@ class Car(models.Model):
     factory_year = models.IntegerField()
     model_year = models.IntegerField()
     value = models.FloatField(blank=True, null=True)
+
+    def __str__(self): # Nome descritivo do objeto 
+        return self.model
