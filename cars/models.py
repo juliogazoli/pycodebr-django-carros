@@ -16,7 +16,9 @@ class Car(models.Model):
         Brand, on_delete=models.PROTECT, related_name='car_brand')
     factory_year = models.IntegerField()
     model_year = models.IntegerField()
+    plate = models.CharField(max_length=10, blank=True, null=True)
     value = models.FloatField(blank=True, null=True)
+    photo = models.ImageField(upload_to='cars/', blank=True, null=True)
 
     def __str__(self):  # Nome descritivo do objeto
         return self.model
